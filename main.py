@@ -15,7 +15,6 @@ class AddLocationForm(BoxLayout):
         config = ConfigParser.SafeConfigParser()
         config.read('config.ini')
         my_api_key = config.get('my_weather_id', 'weather_api_key')
-       # print my_api_key
         search_template = "http://api.openweathermap.org/data/2.5/forecast/daily?APPID=" + my_api_key + "&q={}"
         print search_template
         search_url = search_template.format(self.search_input.text)
